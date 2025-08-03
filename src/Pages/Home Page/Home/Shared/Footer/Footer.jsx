@@ -11,9 +11,12 @@ const Footer = () => {
     </div>
   );
   return (
-    <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
+    <footer className="footer mt-5 footer-horizontal footer-center bg-black text-white rounded-2xl p-10">
       <div>
         <ProfastLogo/>
+      </div>
+      <div>
+        <p className="text-gray-400 lg:px-55">Enjoy fast, reliable parcel delivery with real-time tracking and zero hassle. From personal packages to business shipments — we deliver on time, every time.</p>
       </div>
       <nav className="grid grid-flow-col gap-4">{links}</nav>
       <nav>

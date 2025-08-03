@@ -1,3 +1,4 @@
+import Accordion from "../Accordion/Accordion";
 import Banner from "../Banner/Banner";
 import ClientLogo from "../ClientLogo/ClientLogo";
 import FeatureCards from "../FeatureCards/FeatureCards";
@@ -12,6 +13,7 @@ const Home = () => {
             <ClientLogo/>
             <FeatureCards/>
             <Merchant/>
+            <Accordion/>
         </div>
     );
 };
