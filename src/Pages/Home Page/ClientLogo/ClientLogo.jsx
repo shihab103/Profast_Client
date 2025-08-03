@@ -20,7 +20,7 @@ const ClientLogo = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-100">
+    <section className="py-12 rounded-2xl bg-white">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold">We Have Helped Companies</h2>
         <p className="text-gray-600 mt-2">

@@ -25,24 +25,24 @@ const features = [
 
 const FeatureCards = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+    <div className=" flex mt-10 flex-col gap-5">
       {features.map((feature, index) => (
         <div
           key={index}
-          className="flex items-center border rounded-2xl p-4 shadow hover:shadow-lg transition duration-300 bg-white"
+          className="flex items-center rounded-2xl p-4 shadow hover:shadow-lg transition duration-300 bg-white"
         >
           {/* Left: Image */}
           <img
             src={feature.image}
             alt={feature.title}
-            className="w-16 h-16 object-contain mr-4"
+            className="w-30 h-30 object-contain mr-12"
           />
 
           {/* Divider */}
           <div className="border-r border-dashed h-20 mr-4"></div>
 
           {/* Right: Text */}
-          <div>
+          <div className='text-start'>
             <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
             <p className="text-sm text-gray-600">{feature.description}</p>
           </div>
