@@ -1,8 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router";
 import ProfastLogo from "../ProfastLogo/ProfastLogo";
+import useAuth from "../../../../../Hooks/useAuth";
 
 const Navbar = () => {
+  const { user, logOut } = useAuth();
+  const handleLogout = () => {
+    logOut()
+      .then((result) => {
+        console.log("🚀 ~ hangleLogout ~ result:", result);
+      })
+      .catch((error) => {
+        console.log("🚀 ~ hangleLogout ~ error:", error);
+      });
+  };
   return (
     <div className="navbar bg-base-100 shadow-sm px-4">
       {/* Left: Logo */}
@@ -19,12 +30,18 @@ const Navbar = () => {
 
       {/* Right: Login & Register (only on large screen) */}
       <div className="hidden lg:flex flex-1 justify-end gap-3">
-        <NavLink to="/login" className="btn btn-ghost">
-          Login
-        </NavLink>
-        <NavLink to="/register" className="btn btn-ghost">
-          Register
-        </NavLink>
+        {user ? (
+          <button onClick={handleLogout} className="btn btn-ghost">Logout</button>
+        ) : (
+          <>
+            <NavLink to="/login" className="btn btn-ghost">
+              Login
+            </NavLink>
+            <NavLink to="/register" className="btn btn-ghost">
+              Register
+            </NavLink>
+          </>
+        )}
       </div>
 
       {/* Dropdown menu on small screen */}
