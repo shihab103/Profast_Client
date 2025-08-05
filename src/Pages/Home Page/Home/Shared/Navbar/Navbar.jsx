@@ -26,6 +26,9 @@ const Navbar = () => {
         <NavLink to="/" className="btn btn-ghost normal-case">
           Home
         </NavLink>
+        <NavLink to="/coverage" className="btn btn-ghost normal-case">
+          Coverage
+        </NavLink>
       </div>
 
       {/* Right: Login & Register (only on large screen) */}
