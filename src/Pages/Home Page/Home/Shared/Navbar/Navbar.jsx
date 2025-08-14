@@ -26,15 +26,30 @@ const Navbar = () => {
         <NavLink to="/" className="btn btn-ghost normal-case">
           Home
         </NavLink>
+        <NavLink to="/sendParcel" className="btn btn-ghost normal-case">
+          Send A Parcel
+        </NavLink>
         <NavLink to="/coverage" className="btn btn-ghost normal-case">
           Coverage
+        </NavLink>
+
+        {user && (
+          <>
+            <NavLink to={"/dashboard"} className="btn btn-ghost normal-case">Dashboard</NavLink>
+          </>
+        )}
+
+        <NavLink to="/add-parcel" className="btn btn-ghost normal-case">
+          Add Parcel
         </NavLink>
       </div>
 
       {/* Right: Login & Register (only on large screen) */}
       <div className="hidden lg:flex flex-1 justify-end gap-3">
         {user ? (
-          <button onClick={handleLogout} className="btn btn-ghost">Logout</button>
+          <button onClick={handleLogout} className="btn btn-ghost">
+            Logout
+          </button>
         ) : (
           <>
             <NavLink to="/login" className="btn btn-ghost">
